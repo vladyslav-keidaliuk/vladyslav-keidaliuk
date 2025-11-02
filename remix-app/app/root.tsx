@@ -32,13 +32,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body suppressHydrationWarning={true}>
         {children}
         <ScrollRestoration />
         <Scripts />
         <script src={`${import.meta.env.BASE_URL}flyonui.js`}></script>
       </body>
     </html>
+  );
+}
+
+export function HydrateFallback() {
+  return (
+    <div className="min-h-screen bg-base-100 flex items-center justify-center">
+      <div className="text-center">
+        <div className="loading loading-spinner loading-lg text-primary mb-4"></div>
+        <p className="text-base-content/70">Loading...</p>
+      </div>
+    </div>
   );
 }
 
@@ -52,7 +63,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let stack: string | undefined;
 
   if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
+    message = error.status === 404 ? "404 - Page Not Found" : "Error";
     details =
       error.status === 404
         ? "The requested page could not be found."
@@ -63,14 +74,30 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
-          <code>{stack}</code>
-        </pre>
-      )}
-    </main>
+    <div className="min-h-screen bg-base-100 flex items-center justify-center px-4">
+      <div className="text-center max-w-md">
+        <div className="text-6xl mb-4">😵</div>
+        <h1 className="text-4xl font-bold mb-4 text-base-content">{message}</h1>
+        <p className="text-lg text-base-content/70 mb-8">{details}</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/" className="btn btn-primary">
+            Go Home
+          </a>
+          <a href="/portfolio" className="btn btn-outline">
+            View Portfolio
+          </a>
+        </div>
+        {stack && (
+          <details className="mt-8 text-left">
+            <summary className="cursor-pointer text-sm text-base-content/50 hover:text-base-content/70">
+              Show Error Details
+            </summary>
+            <pre className="mt-4 p-4 bg-base-200 rounded text-xs overflow-x-auto text-left">
+              <code>{stack}</code>
+            </pre>
+          </details>
+        )}
+      </div>
+    </div>
   );
 }

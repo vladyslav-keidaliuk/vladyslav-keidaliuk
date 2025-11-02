@@ -1,0 +1,36 @@
+import type { PersonalInfo, StatItem } from "~/types";
+
+// Personal information
+export const PERSONAL_INFO: PersonalInfo = {
+  name: "Vladyslav Keidaliuk",
+  title: "QA Engineer",
+  description: "Passionate about ensuring software quality through comprehensive testing, automation frameworks, and continuous improvement processes",
+  email: "vladyslav.keidaliuk@gmail.com",
+  avatar: {
+    initials: "VK",
+    alt: "Vladyslav Keidaliuk",
+    src: "https://media.licdn.com/dms/image/v2/D4E03AQFDiRtOVvql2g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712087131262?e=1763596800&v=beta&t=Xy8OIhbh8PuyhiqlR2ROV0zlcf7KWLlMiZzg058o-w0"
+  }
+};
+
+// Statistics for home page
+export const STATS: StatItem[] = [
+  {
+    value: "3+",
+    label: "Years Experience",
+    description: "Years in QA",
+    color: "primary"
+  },
+  {
+    value: "50+",
+    label: "Tests Automated",
+    description: "Automated Tests",
+    color: "secondary"
+  },
+  {
+    value: "15+",
+    label: "Projects Tested",
+    description: "Projects Completed",
+    color: "accent"
+  }
+];
