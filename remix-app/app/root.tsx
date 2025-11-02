@@ -36,7 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
-        <script src="/flyonui.js"></script>
+        <script src={`${import.meta.env.BASE_URL}flyonui.js`}></script>
       </body>
     </html>
   );
