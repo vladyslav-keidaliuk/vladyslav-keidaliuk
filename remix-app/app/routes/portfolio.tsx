@@ -2,8 +2,8 @@ import type { Route } from "./+types/portfolio";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Vladyslav Keidaliuk - Portfolio" },
-    { name: "description", content: "Full-stack developer portfolio showcasing projects and skills" },
+    { title: "Vladyslav Keidaliuk - QA Engineer Portfolio" },
+    { name: "description", content: "QA Engineer portfolio showcasing testing expertise, automation projects, and quality assurance skills" },
   ];
 }
 
@@ -11,54 +11,104 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-base-100">
       {/* Navigation */}
-      <nav className="navbar bg-base-100 shadow-lg sticky top-0 z-50">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16"></path>
-              </svg>
-            </div>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <a className="btn btn-ghost text-xl font-bold">Vladyslav Keidaliuk</a>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li><a href="#about" className="btn btn-ghost">About</a></li>
-            <li><a href="#skills" className="btn btn-ghost">Skills</a></li>
-            <li><a href="#projects" className="btn btn-ghost">Projects</a></li>
-            <li><a href="#contact" className="btn btn-ghost">Contact</a></li>
-          </ul>
-        </div>
-        <div className="navbar-end">
-          <a href="#contact" className="btn btn-primary">Get In Touch</a>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="hero min-h-screen bg-gradient-to-br from-primary/10 to-secondary/10">
-        <div className="hero-content text-center">
-          <div className="max-w-md">
-            <div className="avatar mb-8">
-              <div className="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://via.placeholder.com/200x200/4F46E5/FFFFFF?text=VK" alt="Vladyslav Keidaliuk" />
+      <header className="fixed top-0 z-50 w-full bg-base-100/95 backdrop-blur-sm shadow-lg transition-all duration-300">
+        <nav className="navbar mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="w-full md:flex md:items-center md:gap-2">
+            <div className="navbar-start items-center justify-between max-md:w-full">
+              <a className="text-base-content flex items-center gap-3 text-xl font-bold" href="/">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-sm font-bold">
+                  VK
+                </div>
+                Vladyslav Keidaliuk
+              </a>
+              <div className="flex items-center gap-5 md:hidden">
+                <a href="#contact" className="btn btn-primary btn-sm rounded-full">Get In Touch</a>
+                <button
+                  type="button"
+                  className="collapse-toggle btn btn-outline btn-secondary btn-square btn-sm"
+                  data-collapse="#navbar-collapse"
+                  aria-controls="navbar-collapse"
+                  aria-label="Toggle navigation"
+                >
+                  <svg className="w-5 h-5 collapse-open:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                  <svg className="w-5 h-5 collapse-open:block hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
               </div>
             </div>
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <div
+              id="navbar-collapse"
+              className="collapse hidden w-full grow overflow-hidden transition-[height] duration-300 md:flex md:w-fit md:basis-auto"
+            >
+              <div className="text-base-content flex shrink-0 gap-x-6 gap-y-1 font-medium max-md:flex-col md:items-center md:justify-center md:flex-1">
+                <a href="#about" className="link link-animated text-base-content h-9.5 w-fit py-1.75 hover:text-primary">About</a>
+                <a href="#skills" className="link link-animated text-base-content h-9.5 w-fit py-1.75 hover:text-primary">Skills</a>
+                <a href="#projects" className="link link-animated text-base-content h-9.5 w-fit py-1.75 hover:text-primary">Projects</a>
+                <a href="#contact" className="link link-animated text-base-content h-9.5 w-fit py-1.75 hover:text-primary">Contact</a>
+              </div>
+            </div>
+            <div className="flex grow items-center justify-end gap-4 max-md:hidden">
+              <a href="#contact" className="btn btn-primary shadow-lg hover:shadow-xl transition-all">Get In Touch</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="min-h-screen bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 flex items-center justify-center px-4 pt-20">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center">
+            <div className="flex justify-center mb-8">
+              <div className="avatar">
+                <div className="w-24 md:w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4 shadow-2xl">
+                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-2xl md:text-4xl font-bold">
+                    VK
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
               Vladyslav Keidaliuk
             </h1>
-            <p className="py-6 text-xl">
-              QA Engineer specializing in software testing, web and API testing with automation expertise
+            <div className="badge badge-primary badge-lg mb-6 text-white font-semibold px-4 py-2">
+              QA Engineer
+            </div>
+            <p className="text-lg md:text-xl mb-8 text-base-content/80 leading-relaxed max-w-2xl mx-auto">
+              Specializing in software testing, web and API testing with automation expertise. 
+              Passionate about ensuring quality through comprehensive testing strategies.
             </p>
-            <div className="flex gap-4 justify-center">
-              <a href="#projects" className="btn btn-primary">View My Work</a>
-              <a href="#contact" className="btn btn-outline">Contact Me</a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a href="#projects" className="btn btn-primary btn-lg shadow-lg hover:shadow-xl transition-all w-full sm:w-auto">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+                View My Work
+              </a>
+              <a href="#contact" className="btn btn-outline btn-lg hover:btn-secondary transition-all w-full sm:w-auto">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                Contact Me
+              </a>
+            </div>
+            
+            {/* Quick Stats */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
+              <div className="stat bg-base-200/50 rounded-lg backdrop-blur-sm p-4 text-center">
+                <div className="stat-value text-primary text-2xl md:text-3xl font-bold">3+</div>
+                <div className="stat-desc text-sm md:text-base font-medium">Years Experience</div>
+              </div>
+              <div className="stat bg-base-200/50 rounded-lg backdrop-blur-sm p-4 text-center">
+                <div className="stat-value text-secondary text-2xl md:text-3xl font-bold">50+</div>
+                <div className="stat-desc text-sm md:text-base font-medium">Tests Automated</div>
+              </div>
+              <div className="stat bg-base-200/50 rounded-lg backdrop-blur-sm p-4 text-center">
+                <div className="stat-value text-accent text-2xl md:text-3xl font-bold">15+</div>
+                <div className="stat-desc text-sm md:text-base font-medium">Projects Tested</div>
+              </div>
             </div>
           </div>
         </div>
@@ -71,45 +121,50 @@ export default function Portfolio() {
             <h2 className="text-4xl font-bold mb-4">About Me</h2>
             <div className="w-20 h-1 bg-primary mx-auto"></div>
           </div>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
-              <div className="card bg-base-200 shadow-xl">
-                <div className="card-body">
-                  <h3 className="card-title text-2xl mb-4">Hello! I'm Vladyslav</h3>
-                  <p className="text-lg leading-relaxed mb-4">
+              <div className="card bg-gradient-to-br from-base-200 to-base-300 shadow-2xl border border-base-300">
+                <div className="card-body p-8">
+                  <h3 className="card-title text-3xl mb-6 text-primary">Hello! I'm Vladyslav</h3>
+                  <p className="text-lg leading-relaxed mb-4 text-base-content/90">
                     I'm a dedicated QA Engineer with experience in software testing, specializing in web and API testing. 
                     I'm proficient in test automation frameworks and developing automated UI tests, with a solid understanding of SDLC and QA processes.
                   </p>
-                  <p className="text-lg leading-relaxed mb-6">
+                  <p className="text-lg leading-relaxed mb-6 text-base-content/90">
                     Highly responsible, goal-oriented, and communicative, with a strong focus on delivering high-quality results. 
                     I'm dedicated to continuous professional growth and enhancing technical expertise to drive efficiency and innovation in quality assurance.
                   </p>
                   <div className="card-actions">
-                    <a href="#contact" className="btn btn-primary">Let's Connect</a>
+                    <a href="#contact" className="btn btn-primary btn-lg shadow-lg hover:shadow-xl transition-all">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                      </svg>
+                      Let's Connect
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="stat bg-primary text-primary-content rounded-lg">
-                <div className="stat-title text-primary-content/70">Projects</div>
-                <div className="stat-value">15+</div>
-                <div className="stat-desc text-primary-content/70">Completed</div>
+              <div className="stat bg-gradient-to-br from-primary to-primary/80 text-primary-content rounded-xl shadow-lg p-6 text-center">
+                <div className="stat-value text-3xl font-bold mb-2">15+</div>
+                <div className="stat-title text-primary-content/90 font-semibold">Projects</div>
+                <div className="stat-desc text-primary-content/70">Tested & Delivered</div>
               </div>
-              <div className="stat bg-secondary text-secondary-content rounded-lg">
-                <div className="stat-title text-secondary-content/70">Experience</div>
-                <div className="stat-value">3+</div>
-                <div className="stat-desc text-secondary-content/70">Years</div>
+              <div className="stat bg-gradient-to-br from-secondary to-secondary/80 text-secondary-content rounded-xl shadow-lg p-6 text-center">
+                <div className="stat-value text-3xl font-bold mb-2">3+</div>
+                <div className="stat-title text-secondary-content/90 font-semibold">Experience</div>
+                <div className="stat-desc text-secondary-content/70">Years in QA</div>
               </div>
-              <div className="stat bg-accent text-accent-content rounded-lg">
-                <div className="stat-title text-accent-content/70">Technologies</div>
-                <div className="stat-value">20+</div>
-                <div className="stat-desc text-accent-content/70">Mastered</div>
+              <div className="stat bg-gradient-to-br from-accent to-accent/80 text-accent-content rounded-xl shadow-lg p-6 text-center">
+                <div className="stat-value text-3xl font-bold mb-2">50+</div>
+                <div className="stat-title text-accent-content/90 font-semibold">Tests</div>
+                <div className="stat-desc text-accent-content/70">Automated</div>
               </div>
-              <div className="stat bg-success text-success-content rounded-lg">
-                <div className="stat-title text-success-content/70">Clients</div>
-                <div className="stat-value">10+</div>
-                <div className="stat-desc text-success-content/70">Satisfied</div>
+              <div className="stat bg-gradient-to-br from-success to-success/80 text-success-content rounded-xl shadow-lg p-6 text-center">
+                <div className="stat-value text-3xl font-bold mb-2">99%</div>
+                <div className="stat-title text-success-content/90 font-semibold">Quality</div>
+                <div className="stat-desc text-success-content/70">Assurance Rate</div>
               </div>
             </div>
           </div>
