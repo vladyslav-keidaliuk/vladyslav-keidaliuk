@@ -1,5 +1,13 @@
 import { Button } from "~/components/ui/button";
-import { LinkedInIcon, EmailIcon, GitHubIcon } from "~/components/ui/icons";
+import { LinkedInIcon, EmailIcon, GitHubIcon, GitLabIcon } from "~/components/ui/icons";
+import { SOCIAL_LINKS } from "~/constants";
+
+const iconMap = {
+  LinkedIn: LinkedInIcon,
+  GitHub: GitHubIcon,
+  GitLab: GitLabIcon,
+  Email: EmailIcon
+};
 
 export const ContactSection = () => {
   return (
@@ -43,31 +51,22 @@ export const ContactSection = () => {
           <div className="mt-8 text-center">
             <p className="text-lg mb-4">Or connect with me directly:</p>
             <div className="flex justify-center gap-4">
-              <a 
-                href="https://www.linkedin.com/in/vladyslav-keidaliuk" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn btn-ghost btn-circle text-info"
-                aria-label="LinkedIn Profile"
-              >
-                <LinkedInIcon className="w-8 h-8" />
-              </a>
-              <a 
-                href="mailto:vladyslav.keidaliuk@gmail.com" 
-                className="btn btn-ghost btn-circle text-error"
-                aria-label="Send Email"
-              >
-                <EmailIcon className="w-8 h-8" />
-              </a>
-              <a 
-                href="https://github.com/vladyslav-keidaliuk" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn btn-ghost btn-circle text-base-content"
-                aria-label="GitHub Profile"
-              >
-                <GitHubIcon className="w-8 h-8" />
-              </a>
+              {SOCIAL_LINKS.map((link) => {
+                const IconComponent = iconMap[link.name as keyof typeof iconMap];
+                
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target={link.href.startsWith('mailto:') ? undefined : '_blank'}
+                    rel={link.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+                    className={`btn btn-circle btn-outline ${link.hoverColor} transition-all duration-300 group`}
+                    aria-label={link.ariaLabel}
+                  >
+                    <IconComponent className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

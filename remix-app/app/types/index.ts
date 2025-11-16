@@ -49,3 +49,30 @@ export interface ProjectInfo {
   github?: string;
   image?: string;
 }
+
+export interface WorkExperience {
+  id: string;
+  title: string;
+  company: string;
+  location?: string;
+  startDate: string;
+  endDate: string | 'Present';
+  description: string;
+  responsibilities: string[];
+  achievements?: string[];
+  technologies?: string[];
+}
+
+export interface Education {
+  id: string;
+  degree: string;
+  field: string;
+  institution: string;
+  location?: string;
+  startDate: string;
+  endDate: string | 'Present';
+  gpa?: string;
+  description?: string;
+  achievements?: string[];
+  coursework?: string[];
+}

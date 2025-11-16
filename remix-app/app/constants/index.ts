@@ -2,3 +2,4 @@
 export { PERSONAL_INFO, STATS } from './personal';
 export { NAV_ITEMS, SOCIAL_LINKS } from './navigation';
 export { PROJECTS } from './projects';
+export { WORK_EXPERIENCE, EDUCATION, CERTIFICATIONS } from './experience';

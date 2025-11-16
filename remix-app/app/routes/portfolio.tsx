@@ -3,6 +3,8 @@ import { Header, Footer } from "~/components/layout";
 import { 
   PortfolioHeroSection, 
   AboutSection, 
+  ExperienceSection,
+  EducationSection,
   SkillsSection, 
   ProjectsSection, 
   ContactSection 
@@ -22,6 +24,8 @@ export default function Portfolio() {
       <Header />
       <PortfolioHeroSection />
       <AboutSection />
+      <ExperienceSection />
+      <EducationSection />
       <SkillsSection />
       <ProjectsSection />
       <ContactSection />
