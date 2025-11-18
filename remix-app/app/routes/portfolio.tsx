@@ -7,7 +7,8 @@ import {
   EducationSection,
   SkillsSection, 
   ProjectsSection, 
-  ContactSection 
+  ContactSection,
+  CalendlySection
 } from "~/components/sections";
 import { PERSONAL_INFO } from "~/constants";
 
@@ -28,6 +29,7 @@ export default function Portfolio() {
       <EducationSection />
       <SkillsSection />
       <ProjectsSection />
+      <CalendlySection />
       <ContactSection />
       <Footer />
     </div>

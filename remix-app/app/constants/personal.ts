@@ -6,6 +6,7 @@ export const PERSONAL_INFO: PersonalInfo = {
   title: "QA Engineer",
   description: "Passionate about ensuring software quality through comprehensive testing, automation frameworks, and continuous improvement processes",
   email: "vladyslav.keidaliuk@gmail.com",
+  calendlyUrl: "https://calendly.com/vladyslav-keidaliuk/30min",
   avatar: {
     initials: "VK",
     alt: "Vladyslav Keidaliuk",

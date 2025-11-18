@@ -25,6 +25,7 @@ export interface PersonalInfo {
   title: string;
   description: string;
   email: string;
+  calendlyUrl?: string;
   avatar: {
     initials: string;
     alt: string;

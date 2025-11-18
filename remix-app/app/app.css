@@ -8,9 +8,84 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-base-100 text-base-content;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+/* Button accent hover override - use purple theme color */
+.btn-outline.hover\:btn-accent:hover,
+button.hover\:btn-accent:hover,
+.btn.hover\:btn-accent:hover,
+a.hover\:btn-accent:hover,
+.btn-accent,
+.btn-accent:hover {
+  background-color: oklch(0.5393 0.271 286.75) !important;
+  border-color: oklch(0.5393 0.271 286.75) !important;
+  color: white !important;
+}
+
+/* Calendly Modal Dark Mode - Invert and shift colors to purple */
+.dark .calendly-overlay,
+.dark .calendly-popup-content,
+.dark .calendly-popup {
+  filter: invert(1) hue-rotate(330deg) !important;
+}
+
+.dark .calendly-overlay img,
+.dark .calendly-popup-content img,
+.dark .calendly-popup img {
+  filter: invert(1) hue-rotate(330deg) !important;
+}
+
+/* Calendly color overrides - force purple theme */
+.calendly-inline-widget [class*="selected"],
+.calendly-popup-content [class*="selected"],
+.calendly-inline-widget [class*="active"],
+.calendly-popup-content [class*="active"],
+.calendly-inline-widget [class*="available"],
+.calendly-popup-content [class*="available"],
+.calendly-inline-widget button,
+.calendly-popup-content button {
+  background-color: oklch(0.5393 0.271 286.75) !important;
+  border-color: oklch(0.5393 0.271 286.75) !important;
+  color: white !important;
+}
+
+/* Override green colors in Calendly modal - convert to purple */
+.calendly-inline-widget [style*="rgb(76, 175, 80)"],
+.calendly-popup-content [style*="rgb(76, 175, 80)"],
+.calendly-inline-widget [style*="rgb(46, 125, 50)"],
+.calendly-popup-content [style*="rgb(46, 125, 50)"],
+.calendly-inline-widget [style*="#4CAF50"],
+.calendly-popup-content [style*="#4CAF50"],
+.calendly-inline-widget [style*="background-color: rgb(76, 175, 80)"],
+.calendly-popup-content [style*="background-color: rgb(76, 175, 80)"],
+.calendly-inline-widget [style*="background-color: rgb(46, 125, 50)"],
+.calendly-popup-content [style*="background-color: rgb(46, 125, 50)"] {
+  background-color: oklch(0.5393 0.271 286.75) !important;
+  border-color: oklch(0.5393 0.271 286.75) !important;
+  color: white !important;
+}
+
+.calendly-inline-widget [style*="color: rgb(76, 175, 80)"],
+.calendly-popup-content [style*="color: rgb(76, 175, 80)"],
+.calendly-inline-widget [style*="color: rgb(46, 125, 50)"],
+.calendly-popup-content [style*="color: rgb(46, 125, 50)"] {
+  color: oklch(0.5393 0.271 286.75) !important;
+}
+
+.calendly-inline-widget [class*="day"]:hover,
+.calendly-popup-content [class*="day"]:hover,
+.calendly-inline-widget button:hover,
+.calendly-popup-content button:hover {
+  background-color: oklch(0.6 0.271 286.75) !important;
+  color: white !important;
+}
+
+.calendly-inline-widget a,
+.calendly-popup-content a,
+.calendly-inline-widget svg,
+.calendly-popup-content svg {
+  color: oklch(0.5393 0.271 286.75) !important;
+  fill: oklch(0.5393 0.271 286.75) !important;
 }

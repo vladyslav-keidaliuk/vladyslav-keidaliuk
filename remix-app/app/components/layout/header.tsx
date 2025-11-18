@@ -1,5 +1,6 @@
 import { MenuIcon, CloseIcon } from "~/components/ui/icons";
 import { Button } from "~/components/ui/button";
+import { ThemeSwitcher } from "~/components/ui/theme-switcher";
 import { PERSONAL_INFO, NAV_ITEMS } from "~/constants";
 
 export const Header = () => {
@@ -42,8 +43,9 @@ export const Header = () => {
             </div>
           </div>
 
-          {/* Desktop CTA Button */}
-          <div className="hidden lg:flex items-center flex-shrink-0">
+          {/* Desktop CTA Button & Theme Switcher */}
+          <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
+            <ThemeSwitcher />
             <Button
               href="/portfolio#contact"
               variant="primary"
@@ -54,8 +56,9 @@ export const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button & Theme Switcher */}
           <div className="flex items-center gap-2 lg:hidden">
+            <ThemeSwitcher />
             <button
               type="button"
               className="collapse-toggle btn btn-outline btn-secondary btn-square btn-sm"
@@ -84,16 +87,18 @@ export const Header = () => {
                 {item.name}
               </a>
             ))}
-            <div className="pt-4 border-t border-base-300 mt-2">
-              <Button
-                href="/portfolio#contact"
-                variant="primary"
-                size="sm"
-                className="w-full"
-                ariaLabel="Get in touch"
-              >
-                Get In Touch
-              </Button>
+            <div className="pt-4 border-t border-base-300 mt-2 flex items-center gap-2">
+              <div className="flex-1">
+                <Button
+                  href="/portfolio#contact"
+                  variant="primary"
+                  size="sm"
+                  className="w-full"
+                  ariaLabel="Get in touch"
+                >
+                  Get In Touch
+                </Button>
+              </div>
             </div>
           </div>
         </div>

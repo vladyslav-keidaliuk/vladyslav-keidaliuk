@@ -9,3 +9,4 @@ export { EducationSection } from './education';
 export { SkillsSection } from './skills';
 export { ProjectsSection } from './projects';
 export { ContactSection } from './contact';
+export { CalendlySection } from './calendly';

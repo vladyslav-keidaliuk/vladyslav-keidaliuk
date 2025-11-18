@@ -1,9 +1,19 @@
+import { useState, useEffect } from "react";
+import { PopupModal } from "react-calendly";
 import { Avatar } from "~/components/ui/avatar";
 import { Button } from "~/components/ui/button";
-import { BriefcaseIcon, EmailIcon } from "~/components/ui/icons";
+import { BriefcaseIcon, EmailIcon, CalendarIcon } from "~/components/ui/icons";
 import { PERSONAL_INFO } from "~/constants";
 
 export const PortfolioHeroSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    // Wait for client-side hydration
+    setRootElement(document.getElementById("root") || document.body);
+  }, []);
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 flex items-center justify-center px-4 pt-20">
       <div className="container mx-auto max-w-4xl">
@@ -26,7 +36,7 @@ export const PortfolioHeroSection = () => {
             Specializing in software testing, web and API testing with automation expertise. 
             Passionate about ensuring quality through comprehensive testing strategies.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 flex-wrap">
             <Button 
               href="#projects" 
               variant="primary" 
@@ -38,15 +48,23 @@ export const PortfolioHeroSection = () => {
               View My Work
             </Button>
             <Button 
-              href="#contact"
+              href={`mailto:${PERSONAL_INFO.email}`}
               variant="outline" 
               size="lg"
               className="w-full sm:w-auto hover:btn-secondary"
-              ariaLabel="Contact me"
+              ariaLabel="Email me"
             >
               <EmailIcon className="w-5 h-5 mr-2" />
-              Contact Me
+              Email Me
             </Button>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="btn btn-outline btn-lg w-full sm:w-auto hover:btn-accent group"
+              aria-label="Book a call"
+            >
+              <CalendarIcon className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              Book a Call
+            </button>
           </div>
           
           {/* Quick Stats */}
@@ -66,6 +84,15 @@ export const PortfolioHeroSection = () => {
           </div>
         </div>
       </div>
+
+      {rootElement && PERSONAL_INFO.calendlyUrl && (
+        <PopupModal
+          url={PERSONAL_INFO.calendlyUrl}
+          onModalClose={() => setIsOpen(false)}
+          open={isOpen}
+          rootElement={rootElement}
+        />
+      )}
     </section>
   );
 };

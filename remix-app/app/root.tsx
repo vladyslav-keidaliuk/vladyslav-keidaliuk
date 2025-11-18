@@ -31,6 +31,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const theme = localStorage.getItem('theme');
+                const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+                // Default to dark theme since site was designed for dark
+                const isDark = theme === 'dark' || (!theme && !prefersLight);
+                const root = document.documentElement;
+                if (isDark) {
+                  root.classList.add('dark');
+                  root.setAttribute('data-theme', 'dark');
+                } else {
+                  root.classList.remove('dark');
+                  root.setAttribute('data-theme', 'light');
+                }
+              })();
+            `,
+          }}
+        />
       </head>
       <body suppressHydrationWarning={true}>
         {children}
