@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { useFlyonUI } from "~/lib/use-flyonui";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -74,6 +75,7 @@ export function HydrateFallback() {
 }
 
 export default function App() {
+  useFlyonUI();
   return <Outlet />;
 }
 

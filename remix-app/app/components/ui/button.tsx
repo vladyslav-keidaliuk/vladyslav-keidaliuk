@@ -46,7 +46,7 @@ export const Button = ({
   
   if (to) {
     return (
-      <Link to={to} className={baseClasses} aria-label={ariaLabel}>
+      <Link to={to} className={baseClasses} aria-label={ariaLabel} onClick={onClick}>
         {children}
       </Link>
     );
@@ -60,6 +60,7 @@ export const Button = ({
         target={target}
         rel={rel}
         aria-label={ariaLabel}
+        onClick={onClick}
       >
         {children}
       </a>

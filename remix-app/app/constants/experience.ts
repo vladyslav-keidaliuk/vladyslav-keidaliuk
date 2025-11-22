@@ -50,12 +50,15 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 export const EDUCATION: Education[] = [
   {
     id: "edu-1",
-    degree: "Bachelor of Science",
-    field: "Computer Science",
-    institution: "University Name",
-    location: "City, Country",
-    startDate: "September 2016",
-    endDate: "June 2020",
+    degree: "Bachelor",
+    field: "Computer Science (exchange student)",
+    institution: "OTH Regensburg",
+    url: "https://www.oth-regensburg.de/", // Replace with actual university URL
+    location: "Regensburg, Germany",
+    startDate: "September 2024",
+    endDate: "March 2025",
+    status: "Completed",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYkCDOoXqcSzOmFNU9lKmYzstM1sZWKJ-5g&s", // Replace with actual logo URL
     gpa: "3.8/4.0",
     description: "Focused on software engineering, quality assurance methodologies, and software testing principles.",
     achievements: [
@@ -71,6 +74,32 @@ export const EDUCATION: Education[] = [
       "Algorithms and Data Structures",
     ],
   },
+  {
+    id: "edu-2",
+    degree: "Bachelor",
+    field: "Computer Science",
+    institution: "Odessa National Polytechnic University",
+    url: "https://op.edu.ua/", // Replace with actual university URL
+    location: "Odesa, Ukraine",
+    startDate: "September 2021",
+    endDate: "June 2025",
+    status: "Finished 7 of 8 semesters",
+    logo: "https://upload.wikimedia.org/wikipedia/ru/3/33/ONPU.gif", // Replace with actual logo URL
+    gpa: undefined,
+    description: "Focused on software engineering, quality assurance methodologies, and software testing principles.",
+    achievements: [
+      "Dean's List for academic excellence (2018-2020)",
+      "Completed senior project on automated testing frameworks",
+      "Member of Computer Science Club",
+    ],
+    coursework: [
+      "Software Testing and Quality Assurance",
+      "Software Engineering",
+      "Database Systems",
+      "Web Development",
+      "Algorithms and Data Structures",
+    ],
+  }
 ];
 
 export const CERTIFICATIONS = [
@@ -80,12 +109,14 @@ export const CERTIFICATIONS = [
     issuer: "ISTQB",
     date: "2021",
     credentialId: "ISTQB-12345",
+    url: "https://www.istqb.org/verify-certification",
   },
   {
     id: "cert-2",
     name: "Selenium WebDriver with C#",
     issuer: "Udemy",
     date: "2022",
+    url: "https://www.udemy.com/certificate/UC-1234567890/",
   },
 ];
 

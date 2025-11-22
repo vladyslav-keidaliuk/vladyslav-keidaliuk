@@ -72,6 +72,13 @@ export interface Education {
   location?: string;
   startDate: string;
   endDate: string | 'Present';
+  status?: 'Completed' | 'In Progress' | 'Unfinished' | 'On Hold' | string | null;
+  semesters?: {
+    completed: number;
+    total: number;
+  };
+  logo?: string;
+  url?: string;
   gpa?: string;
   description?: string;
   achievements?: string[];

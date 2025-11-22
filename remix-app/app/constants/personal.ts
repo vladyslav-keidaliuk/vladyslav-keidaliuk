@@ -10,7 +10,7 @@ export const PERSONAL_INFO: PersonalInfo = {
   avatar: {
     initials: "VK",
     alt: "Vladyslav Keidaliuk",
-    src: "https://media.licdn.com/dms/image/v2/D4E03AQFDiRtOVvql2g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712087131262?e=1763596800&v=beta&t=Xy8OIhbh8PuyhiqlR2ROV0zlcf7KWLlMiZzg058o-w0"
+    src: "https://media.licdn.com/dms/image/v2/D4E03AQFDiRtOVvql2g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712087131262?e=1765411200&v=beta&t=e7qS6Y-7mPfZQRaQfssqI--dqzlyiSU5flnXGmX5S4Q"
   }
 };
 
