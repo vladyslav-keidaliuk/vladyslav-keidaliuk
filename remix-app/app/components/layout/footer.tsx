@@ -1,40 +1,16 @@
 import { PERSONAL_INFO } from "~/constants";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
-    <footer className="footer footer-center p-10 bg-base-300 text-base-content">
+    <footer className="footer footer-center p-10 bg-gray-900 text-gray-100 dark:bg-black dark:text-gray-300">
       <aside>
         <p className="font-bold">
-          {PERSONAL_INFO.name} <br />{PERSONAL_INFO.title} Portfolio
+          {PERSONAL_INFO.name} <br />{t('portfolio')}
         </p>
-        <p>Copyright © {new Date().getFullYear()} - All rights reserved</p>
+        <p>{t('copyright', { year: new Date().getFullYear() })}</p>
       </aside>
-      <nav>
-        <div className="grid grid-flow-col gap-4">
-          <a 
-            href="https://www.linkedin.com/in/vladyslav-keidaliuk" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="link link-hover"
-          >
-            LinkedIn
-          </a>
-          <a 
-            href="https://github.com/vladyslav-keidaliuk" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="link link-hover"
-          >
-            GitHub
-          </a>
-          <a 
-            href={`mailto:${PERSONAL_INFO.email}`} 
-            className="link link-hover"
-          >
-            Email
-          </a>
-        </div>
-      </nav>
     </footer>
   );
 };

@@ -4,8 +4,10 @@ import { Avatar } from "~/components/ui/avatar";
 import { Button } from "~/components/ui/button";
 import { BriefcaseIcon, EmailIcon, CalendarIcon } from "~/components/ui/icons";
 import { PERSONAL_INFO } from "~/constants";
+import { useTranslation } from "react-i18next";
 
 export const PortfolioHeroSection = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
 
@@ -33,8 +35,7 @@ export const PortfolioHeroSection = () => {
             {PERSONAL_INFO.title}
           </div>
           <p className="text-lg md:text-xl mb-8 text-base-content/80 leading-relaxed max-w-2xl mx-auto">
-            Specializing in software testing, web and API testing with automation expertise. 
-            Passionate about ensuring quality through comprehensive testing strategies.
+            {t('hero.phero.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 flex-wrap">
             <Button 
@@ -45,7 +46,7 @@ export const PortfolioHeroSection = () => {
               ariaLabel="View my projects"
             >
               <BriefcaseIcon className="w-5 h-5 mr-2" />
-              View My Work
+              {t('viewWork')}
             </Button>
             <Button 
               href={`mailto:${PERSONAL_INFO.email}`}
@@ -55,7 +56,7 @@ export const PortfolioHeroSection = () => {
               ariaLabel="Email me"
             >
               <EmailIcon className="w-5 h-5 mr-2" />
-              Email Me
+              {t('emailMe')}
             </Button>
             <button
               onClick={() => setIsOpen(true)}
@@ -63,7 +64,7 @@ export const PortfolioHeroSection = () => {
               aria-label="Book a call"
             >
               <CalendarIcon className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Book a Call
+              {t('bookCall')}
             </button>
           </div>
           
@@ -71,15 +72,15 @@ export const PortfolioHeroSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
             <div className="stat bg-base-200/50 rounded-lg backdrop-blur-sm p-4 text-center">
               <div className="stat-value text-primary text-2xl md:text-3xl font-bold">3+</div>
-              <div className="stat-desc text-sm md:text-base font-medium">Years Experience</div>
+              <div className="stat-desc text-sm md:text-base font-medium">{t('stats.experience.label')}</div>
             </div>
             <div className="stat bg-base-200/50 rounded-lg backdrop-blur-sm p-4 text-center">
               <div className="stat-value text-secondary text-2xl md:text-3xl font-bold">50+</div>
-              <div className="stat-desc text-sm md:text-base font-medium">Tests Automated</div>
+              <div className="stat-desc text-sm md:text-base font-medium">{t('stats.tests.label')}</div>
             </div>
             <div className="stat bg-base-200/50 rounded-lg backdrop-blur-sm p-4 text-center">
               <div className="stat-value text-accent text-2xl md:text-3xl font-bold">15+</div>
-              <div className="stat-desc text-sm md:text-base font-medium">Projects Tested</div>
+              <div className="stat-desc text-sm md:text-base font-medium">{t('stats.projects.label')}</div>
             </div>
           </div>
         </div>

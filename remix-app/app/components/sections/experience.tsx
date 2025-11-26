@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { WORK_EXPERIENCE } from "~/constants";
 import { ChevronDownIcon } from "~/components/ui/icons";
+import { useTranslation } from "react-i18next";
 
 export function ExperienceSection() {
+  const { t } = useTranslation();
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const toggleExpand = (id: string) => {
@@ -13,13 +15,18 @@ export function ExperienceSection() {
     <section id="experience" className="py-20 bg-base-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Work Experience</h2>
+          <h2 className="text-4xl font-bold mb-4">{t('experience.title')}</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
         <div className="max-w-5xl mx-auto space-y-4">
           {WORK_EXPERIENCE.map((job) => {
             const isExpanded = expandedId === job.id;
+            const responsibilities = t(`experience.jobs.${job.id}.responsibilities`, { returnObjects: true }) as string[];
+            const achievements = t(`experience.jobs.${job.id}.achievements`, { returnObjects: true }) as string[];
+            const company = t(`experience.jobs.${job.id}.company`, { defaultValue: job.company });
+            const startDate = t(`experience.jobs.${job.id}.startDate`, { defaultValue: job.startDate });
+            const endDate = t(`experience.jobs.${job.id}.endDate`, { defaultValue: job.endDate });
             
             return (
               <div 
@@ -34,14 +41,14 @@ export function ExperienceSection() {
                       <div className="flex justify-between items-start">
                         <div>
                           <h3 className="card-title text-xl md:text-2xl text-primary mb-1">
-                            {job.title}
+                            {t(`experience.jobs.${job.id}.title`)}
                           </h3>
                           <div className="flex flex-wrap items-center gap-2 text-base md:text-lg">
-                            <span className="font-semibold">{job.company}</span>
-                            {job.location && (
+                            <span className="font-semibold">{company}</span>
+                            {t(`experience.jobs.${job.id}.location`) && (
                               <>
                                 <span className="text-base-content/50 hidden sm:inline">•</span>
-                                <span className="text-base-content/70 text-sm md:text-base">{job.location}</span>
+                                <span className="text-base-content/70 text-sm md:text-base">{t(`experience.jobs.${job.id}.location`)}</span>
                               </>
                             )}
                           </div>
@@ -54,7 +61,7 @@ export function ExperienceSection() {
                     
                     <div className="flex items-center gap-4 mt-2 md:mt-0">
                       <div className="badge bg-blue-600 text-white border-blue-600 badge-lg whitespace-nowrap">
-                        {job.startDate} - {job.endDate}
+                        {startDate} - {endDate}
                       </div>
                       <div className={`hidden md:block transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
                         <ChevronDownIcon className="w-6 h-6" />
@@ -71,25 +78,25 @@ export function ExperienceSection() {
                     <div className="min-h-0">
                       {/* Description */}
                       <p className="text-base-content/80 mb-6 leading-relaxed">
-                        {job.description}
+                        {t(`experience.jobs.${job.id}.description`)}
                       </p>
 
                       {/* Responsibilities */}
                       <div className="mb-6">
-                        <h4 className="font-semibold text-lg mb-3 text-primary/90">Key Responsibilities:</h4>
+                        <h4 className="font-semibold text-lg mb-3 text-primary/90">{t('experience.keyResponsibilities')}</h4>
                         <ul className="list-disc list-inside space-y-2 text-base-content/80">
-                          {job.responsibilities.map((responsibility, idx) => (
+                          {Array.isArray(responsibilities) && responsibilities.map((responsibility, idx) => (
                             <li key={idx} className="pl-2">{responsibility}</li>
                           ))}
                         </ul>
                       </div>
 
                       {/* Achievements */}
-                      {job.achievements && job.achievements.length > 0 && (
+                      {achievements && achievements.length > 0 && (
                         <div className="mb-6">
-                          <h4 className="font-semibold text-lg mb-3 text-secondary/90">Key Achievements:</h4>
+                          <h4 className="font-semibold text-lg mb-3 text-secondary/90">{t('experience.keyAchievements')}</h4>
                           <ul className="list-disc list-inside space-y-2 text-base-content/80">
-                            {job.achievements.map((achievement, idx) => (
+                            {Array.isArray(achievements) && achievements.map((achievement, idx) => (
                               <li key={idx} className="pl-2 text-success">{achievement}</li>
                             ))}
                           </ul>
@@ -99,7 +106,7 @@ export function ExperienceSection() {
                       {/* Technologies */}
                       {job.technologies && job.technologies.length > 0 && (
                         <div className="pt-4 border-t border-base-content/10">
-                          <h4 className="font-semibold text-lg mb-3">Technologies Used:</h4>
+                          <h4 className="font-semibold text-lg mb-3">{t('experience.technologiesUsed')}</h4>
                           <div className="flex flex-wrap gap-2">
                             {job.technologies.map((tech, idx) => (
                               <div key={idx} className="badge badge-primary badge-outline">

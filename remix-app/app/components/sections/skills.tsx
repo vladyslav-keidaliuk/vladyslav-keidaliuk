@@ -1,5 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 interface SkillCategory {
-  title: string;
+  key: string;
   color: string;
   skills: Array<{
     name: string;
@@ -9,7 +11,7 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "Testing & QA",
+    key: "testing",
     color: "text-primary",
     skills: [
       { name: "Test Automation", level: "Expert" },
@@ -19,7 +21,7 @@ const skillCategories: SkillCategory[] = [
     ]
   },
   {
-    title: "Tools & Frameworks",
+    key: "tools",
     color: "text-secondary",
     skills: [
       { name: "Selenium WebDriver", level: "Expert" },
@@ -29,7 +31,7 @@ const skillCategories: SkillCategory[] = [
     ]
   },
   {
-    title: "Programming Languages",
+    key: "languages",
     color: "text-accent",
     skills: [
       { name: "C#", level: "Expert" },
@@ -38,7 +40,7 @@ const skillCategories: SkillCategory[] = [
     ]
   },
   {
-    title: "Databases & Cloud",
+    key: "databases",
     color: "text-info",
     skills: [
       { name: "SQL", level: "Expert" },
@@ -47,7 +49,7 @@ const skillCategories: SkillCategory[] = [
     ]
   },
   {
-    title: "Methodologies & Other",
+    key: "methodologies",
     color: "text-warning",
     skills: [
       { name: "Agile/Scrum", level: "Expert" },
@@ -68,18 +70,20 @@ const getBadgeColor = (level: string) => {
 };
 
 export const SkillsSection = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="skills" className="py-20 bg-base-200">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Skills & Technologies</h2>
+          <h2 className="text-4xl font-bold mb-4">{t('skills.title')}</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <div key={index} className="card bg-base-100 shadow-xl">
               <div className="card-body">
-                <h3 className={`card-title ${category.color}`}>{category.title}</h3>
+                <h3 className={`card-title ${category.color}`}>{t(`skills.categories.${category.key}`)}</h3>
                 <div className="space-y-3">
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex} className="flex justify-between items-center">

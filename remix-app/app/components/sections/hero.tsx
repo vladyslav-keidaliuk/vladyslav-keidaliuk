@@ -2,8 +2,10 @@ import { Avatar } from "~/components/ui/avatar";
 import { Button } from "~/components/ui/button";
 import { BriefcaseIcon, EmailIcon } from "~/components/ui/icons";
 import { PERSONAL_INFO } from "~/constants";
+import { useTranslation } from "react-i18next";
 
 export const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="mb-8">
@@ -16,15 +18,15 @@ export const HeroSection = () => {
       </div>
       
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-base-content leading-tight">
-        {PERSONAL_INFO.name}
+        {t('hero.title')}
       </h1>
       
       <div className="badge badge-primary badge-lg mb-6 text-white font-semibold px-4 py-2">
-        {PERSONAL_INFO.title}
+        {t('hero.subtitle')}
       </div>
       
       <p className="text-lg md:text-xl mb-8 text-base-content/80 leading-relaxed max-w-2xl mx-auto px-4">
-        {PERSONAL_INFO.description}
+        {t('hero.description')}
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -36,7 +38,7 @@ export const HeroSection = () => {
           ariaLabel="View my portfolio"
         >
           <BriefcaseIcon className="w-5 h-5 mr-2" />
-          View My Work
+          {t('viewWork')}
         </Button>
         <Button 
           href={`mailto:${PERSONAL_INFO.email}`}
@@ -46,7 +48,7 @@ export const HeroSection = () => {
           ariaLabel="Send me an email"
         >
           <EmailIcon className="w-5 h-5 mr-2" />
-          Get In Touch
+          {t('getInTouch')}
         </Button>
       </div>
     </>

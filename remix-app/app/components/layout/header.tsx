@@ -1,9 +1,12 @@
 import { MenuIcon, CloseIcon } from "~/components/ui/icons";
 import { Button } from "~/components/ui/button";
 import { ThemeSwitcher } from "~/components/ui/theme-switcher";
+import { LanguageSwitcher } from "~/components/ui/language-switcher";
 import { PERSONAL_INFO, NAV_ITEMS } from "~/constants";
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
+  const { t } = useTranslation();
   const handleLinkClick = () => {
     const collapseElement = document.getElementById('navbar-collapse');
     const toggleBtn = document.querySelector('[data-collapse="#navbar-collapse"]');
@@ -46,7 +49,7 @@ export const Header = () => {
                   href={`/portfolio${item.href}`}
                   className="link link-animated text-base-content hover:text-primary transition-colors text-sm"
                 >
-                  {item.name}
+                  {t(`nav.${item.name.toLowerCase()}`)}
                 </a>
               ))}
             </div>
@@ -54,6 +57,7 @@ export const Header = () => {
 
           {/* Desktop CTA Button & Theme Switcher */}
           <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
+            <LanguageSwitcher />
             <ThemeSwitcher />
             <Button
               href="/portfolio#contact"
@@ -61,12 +65,13 @@ export const Header = () => {
               size="sm"
               ariaLabel="Get in touch"
             >
-              Get In Touch
+              {t('getInTouch')}
             </Button>
           </div>
 
           {/* Mobile Menu Button & Theme Switcher */}
           <div className="flex items-center gap-2 lg:hidden">
+            <LanguageSwitcher />
             <ThemeSwitcher />
             <button
               type="button"
@@ -95,7 +100,7 @@ export const Header = () => {
                   className="text-lg font-medium text-base-content/80 hover:text-primary transition-colors py-2"
                   onClick={handleLinkClick}
                 >
-                  {item.name}
+                  {t(`nav.${item.name.toLowerCase()}`)}
                 </a>
               ))}
             </div>
@@ -109,7 +114,7 @@ export const Header = () => {
                 ariaLabel="Get in touch"
                 onClick={handleLinkClick}
               >
-                Get In Touch
+                {t('getInTouch')}
               </Button>
             </div>
           </div>

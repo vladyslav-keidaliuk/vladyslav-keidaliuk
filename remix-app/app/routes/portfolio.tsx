@@ -11,11 +11,12 @@ import {
   CalendlySection
 } from "~/components/sections";
 import { PERSONAL_INFO } from "~/constants";
+import i18n from "~/i18n";
 
 export function meta({}: Route.MetaArgs) {
   return [
     { title: `${PERSONAL_INFO.name} - QA Engineer Portfolio` },
-    { name: "description", content: "QA Engineer portfolio showcasing testing expertise, automation projects, and quality assurance skills" },
+    { name: "description", content: i18n.t('hero.phero.description') || "QA Engineer portfolio showcasing testing expertise, automation projects, and quality assurance skills" },
   ];
 }
 
