@@ -1,0 +1,253 @@
+{
+  "welcome": "Willkommen",
+  "language": "Sprache",
+  "getInTouch": "Kontaktieren",
+  "viewWork": "Meine Arbeiten",
+  "letsConnect": "Lass uns verbinden",
+  "emailMe": "Email mich",
+  "bookCall": "Termin buchen",
+  "copyright": "Urheberrecht © {{year}} - Alle Rechte vorbehalten",
+  "portfolio": "Portfolio",
+  "nav": {
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  },
+  "hero": {
+    "title": "Hallo, ich bin Vladyslav",
+    "subtitle": "QA Engineer",
+    "description": "Leidenschaftlich darin, Softwarequalität durch umfassende Tests, Automatisierungs-Frameworks und kontinuierliche Verbesserungsprozesse sicherzustellen.",
+    "phero": {
+        "description": "Spezialisiert auf Softwaretests, Web- und API-Tests mit Automatisierungsexpertise. Leidenschaftlich für Qualitätssicherung durch umfassende Teststrategien."
+    }
+  },
+  "about": {
+    "title": "Über mich",
+    "hello": "Hallo! Ich bin Vladyslav",
+    "p1": "Ich bin ein engagierter QA Engineer mit Erfahrung im Softwaretesten, spezialisiert auf Web- und API-Tests. Ich beherrsche Testautomatisierungs-Frameworks und die Entwicklung automatisierter UI-Tests und verfüge über ein fundiertes Verständnis von SDLC- und QA-Prozessen.",
+    "p2": "Sehr verantwortungsbewusst, zielorientiert und kommunikativ, mit einem starken Fokus auf die Lieferung qualitativ hochwertiger Ergebnisse. Ich widme mich der kontinuierlichen beruflichen Weiterentwicklung und der Verbesserung meiner technischen Expertise, um Effizienz und Innovation in der Qualitätssicherung voranzutreiben.",
+    "stats": {
+      "projects": { "label": "Projekte", "desc": "Getestet & Geliefert" },
+      "experience": { "label": "Erfahrung", "desc": "Jahre in QA" },
+      "tests": { "label": "Tests", "desc": "Automatisert" },
+      "quality": { "label": "Qualität", "desc": "Sicherungsrate" }
+    }
+  },
+  "stats": {
+    "experience": { "label": "Jahre Erfahrung", "desc": "Jahre in QA" },
+    "tests": { "label": "Tests Automatisert", "desc": "Automatisierte Tests" },
+    "projects": { "label": "Projekte Getestet", "desc": "Projekte Abgeschlossen" }
+  },
+  "skills": {
+    "title": "Fähigkeiten & Technologien",
+    "categories": {
+      "testing": "Testen & QA",
+      "tools": "Tools & Frameworks",
+      "languages": "Programmiersprachen",
+      "databases": "Datenbanken & Cloud",
+      "methodologies": "Methoden & Sonstiges"
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie mich",
+    "name": "Name",
+    "email": "Email",
+    "message": "Nachricht",
+    "send": "Nachricht Senden",
+    "orConnect": "Oder verbinden Sie sich direkt mit mir:",
+    "placeholders": {
+      "name": "Ihr Name",
+      "email": "Ihre Email",
+      "message": "Ihre Nachricht"
+    }
+  },
+  "experience": {
+    "title": "Berufserfahrung",
+    "keyResponsibilities": "Hauptverantwortlichkeiten:",
+    "keyAchievements": "Wichtige Erfolge:",
+    "technologiesUsed": "Eingesetzte Technologien:",
+    "jobs": {
+      "qa-engineer-1": {
+        "title": "QA Engineer",
+        "company": "Tech Company Inc.",
+        "location": "Remote",
+        "startDate": "Januar 2022",
+        "endDate": "Heute",
+        "description": "Leitung von Qualitätssicherungsinitiativen für Web- und mobile Anwendungen mit Fokus auf Testautomatisierung und Prozessverbesserung.",
+        "responsibilities": [
+          "Entwicklung und Wartung automatisierter Testsuiten mit Selenium und C# für Webanwendungen",
+          "Durchführung umfassender API-Tests mit Postman und Python",
+          "Zusammenarbeit mit Entwicklungsteams zur Implementierung von Best Practices im Testen",
+          "Erstellung und Ausführung von Testplänen, Testfällen und Testskripten",
+          "Identifizierung, Dokumentation und Verfolgung von Fehlern mit JIRA",
+          "Durchführung von Regressions-, Funktions- und Integrationstests"
+        ],
+        "achievements": [
+          "Reduzierung der Testzeit um 40% durch Implementierung eines Automatisierungs-Frameworks",
+          "Verbesserung der Fehlererkennungsrate um 30% durch systematische Analyse der Testabdeckung",
+          "Mentoring von 3 Junior QA Engineers in Testautomatisierungstechniken"
+        ]
+      },
+      "qa-engineer-2": {
+        "title": "Junior QA Engineer",
+        "company": "Software Solutions Ltd.",
+        "location": "Hybrid",
+        "startDate": "Juni 2020",
+        "endDate": "Dezember 2021",
+        "description": "Verantwortlich für manuelles und automatisiertes Testen von Unternehmenssoftwareanwendungen.",
+        "responsibilities": [
+          "Ausführung manueller Testfälle für Webanwendungen",
+          "Entwicklung automatisierter UI-Tests mit Selenium WebDriver",
+          "Durchführung von API-Tests und Validierung",
+          "Teilnahme an Agile-Zeremonien und Sprint-Planung",
+          "Dokumentation von Testergebnissen und Meldung von Defekten"
+        ],
+        "achievements": [
+          "Erfolgreiche Automatisierung von 50+ Testfällen in den ersten 6 Monaten",
+          "Beitrag zu 95% Testabdeckung für kritische Funktionen"
+        ]
+      }
+    }
+  },
+  "education": {
+    "title": "Ausbildung & Zertifizierungen",
+    "educationTitle": "Ausbildung",
+    "certificationsTitle": "Zertifizierungen",
+    "achievementsTitle": "Erfolge:",
+    "courseworkTitle": "Relevante Kursarbeit:",
+    "degreeFormat": "{{degree}} in {{field}}",
+    "gpaFormat": "GPA: {{gpa}}",
+    "items": {
+      "edu-1": {
+        "degree": "Bachelor",
+        "field": "Informatik (Austauschstudent)",
+        "institution": "OTH Regensburg",
+        "location": "Regensburg, Deutschland",
+        "startDate": "September 2024",
+        "endDate": "März 2025",
+        "status": "Abgeschlossen",
+        "description": "Schwerpunkt auf Softwaretechnik, Qualitätssicherungsmethoden und Softwaretestprinzipien.",
+        "achievements": [
+          "Dean's List für akademische Exzellenz (2018-2020)",
+          "Abschlussarbeit über automatisierte Test-Frameworks",
+          "Mitglied im Informatik-Club"
+        ],
+        "coursework": [
+          "Softwaretest und Qualitätssicherung",
+          "Softwaretechnik",
+          "Datenbanksysteme",
+          "Webentwicklung",
+          "Algorithmen und Datenstrukturen"
+        ]
+      },
+      "edu-2": {
+        "degree": "Bachelor",
+        "field": "Informatik",
+        "institution": "Nationale Polytechnische Universität Odessa",
+        "location": "Odessa, Ukraine",
+        "startDate": "September 2021",
+        "endDate": "Juni 2025",
+        "status": "7 von 8 Semestern abgeschlossen",
+        "description": "Schwerpunkt auf Softwaretechnik, Qualitätssicherungsmethoden und Softwaretestprinzipien.",
+        "achievements": [
+          "Dean's List für akademische Exzellenz (2018-2020)",
+          "Abschlussarbeit über automatisierte Test-Frameworks",
+          "Mitglied im Informatik-Club"
+        ],
+        "coursework": [
+          "Softwaretest und Qualitätssicherung",
+          "Softwaretechnik",
+          "Datenbanksysteme",
+          "Webentwicklung",
+          "Algorithmen und Datenstrukturen"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "subtitle": "Eine Präsentation von Qualitätssicherungsprojekten, die Expertise in Testautomatisierung, Leistungstests und kontinuierlicher Integration demonstrieren.",
+    "viewDetails": "Details ansehen",
+    "keyHighlights": "Wichtige Highlights:",
+    "more": "+{{count}} mehr",
+    "status": {
+      "Completed": "Abgeschlossen",
+      "InProgress": "In Bearbeitung",
+      "Planned": "Geplant"
+    },
+    "items": {
+      "ecommerce-automation": {
+        "title": "E-Commerce Testautomatisierungs-Suite",
+        "category": "Web-Automatisierung",
+        "duration": "6 Monate",
+        "description": "Umfassendes End-to-End-Testautomatisierungs-Framework für eine große E-Commerce-Plattform, das Benutzerreisen vom Produktbrowsing bis zum Checkout-Abschluss abdeckt.",
+        "highlights": [
+          "Reduzierung der manuellen Testzeit um 70%",
+          "Erreichung von 95% Testabdeckung",
+          "Integration in CI/CD-Pipeline"
+        ]
+      },
+      "api-testing-framework": {
+        "title": "Microservices API-Test-Framework",
+        "category": "API-Tests",
+        "duration": "4 Monate",
+        "description": "Robustes API-Test-Framework für Microservices-Architektur mit automatisierten Vertragstests und Leistungsvalidierung.",
+        "highlights": [
+          "Automatisierung von 200+ API-Endpunkten",
+          "Implementierung von Vertragstests",
+          "Leistungs-Benchmarking"
+        ]
+      },
+      "mobile-ui-automation": {
+        "title": "Mobile App UI-Automatisierung",
+        "category": "Mobile Tests",
+        "duration": "5 Monate",
+        "description": "Plattformübergreifendes Test-Framework für mobile Anwendungen, das sowohl iOS- als auch Android-Plattformen mit umfassender UI-Validierung unterstützt.",
+        "highlights": [
+          "Plattformübergreifende Kompatibilität",
+          "Device Farm Integration",
+          "Parallele Testausführung"
+        ]
+      },
+      "performance-testing": {
+        "title": "Leistungstests & Optimierung",
+        "category": "Leistungstests",
+        "duration": "3 Monate",
+        "description": "Umfassende Leistungsteststrategie einschließlich Last-, Stress- und Dauertests für hochfrequentierte Webanwendungen.",
+        "highlights": [
+          "Identifizierung von 40% Leistungssteigerung",
+          "Lasttests bis zu 10.000 Benutzer",
+          "Echtzeit-Monitoring-Setup"
+        ]
+      },
+      "cicd-integration": {
+        "title": "CI/CD Pipeline Test-Integration",
+        "category": "DevOps & CI/CD",
+        "duration": "4 Monate",
+        "description": "Nahtlose Integration automatisierter Tests in Continuous Integration und Deployment Pipelines, Sicherstellung von Qualitätsgates in jeder Phase.",
+        "highlights": [
+          "Zero-Downtime Deployments",
+          "Automatisierte Qualitätsgates",
+          "Rollback-Mechanismen"
+        ]
+      },
+      "security-testing": {
+        "title": "Sicherheits-Schwachstellenbewertung",
+        "category": "Sicherheitstests",
+        "duration": "3 Monate",
+        "description": "Umfassende Implementierung von Sicherheitstests unter Verwendung branchenüblicher Tools zur Identifizierung und Minderung potenzieller Schwachstellen.",
+        "highlights": [
+          "Identifizierung von 15+ Schwachstellen",
+          "OWASP Top 10 Compliance",
+          "Automatisierte Sicherheits-Scans"
+        ]
+      }
+    }
+  }
+}

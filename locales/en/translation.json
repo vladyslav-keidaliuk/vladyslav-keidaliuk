@@ -1,0 +1,253 @@
+{
+  "welcome": "Welcome",
+  "language": "Language",
+  "getInTouch": "Get In Touch",
+  "viewWork": "View My Work",
+  "letsConnect": "Let's Connect",
+  "emailMe": "Email Me",
+  "bookCall": "Book a Call",
+  "copyright": "Copyright © {{year}} - All rights reserved",
+  "portfolio": "Portfolio",
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  },
+  "hero": {
+    "title": "Hi, I'm Vladyslav",
+    "subtitle": "QA Engineer",
+    "description": "Passionate about ensuring software quality through comprehensive testing, automation frameworks, and continuous improvement processes",
+    "phero": {
+        "description": "Specializing in software testing, web and API testing with automation expertise. Passionate about ensuring quality through comprehensive testing strategies."
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "hello": "Hello! I'm Vladyslav",
+    "p1": "I'm a dedicated QA Engineer with experience in software testing, specializing in web and API testing. I'm proficient in test automation frameworks and developing automated UI tests, with a solid understanding of SDLC and QA processes.",
+    "p2": "Highly responsible, goal-oriented, and communicative, with a strong focus on delivering high-quality results. I'm dedicated to continuous professional growth and enhancing technical expertise to drive efficiency and innovation in quality assurance.",
+    "stats": {
+      "projects": { "label": "Projects", "desc": "Tested & Delivered" },
+      "experience": { "label": "Experience", "desc": "Years in QA" },
+      "tests": { "label": "Tests", "desc": "Automated" },
+      "quality": { "label": "Quality", "desc": "Assurance Rate" }
+    }
+  },
+  "stats": {
+    "experience": { "label": "Years Experience", "desc": "Years in QA" },
+    "tests": { "label": "Tests Automated", "desc": "Automated Tests" },
+    "projects": { "label": "Projects Tested", "desc": "Projects Completed" }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "categories": {
+      "testing": "Testing & QA",
+      "tools": "Tools & Frameworks",
+      "languages": "Programming Languages",
+      "databases": "Databases & Cloud",
+      "methodologies": "Methodologies & Other"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "orConnect": "Or connect with me directly:",
+    "placeholders": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message"
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "keyResponsibilities": "Key Responsibilities:",
+    "keyAchievements": "Key Achievements:",
+    "technologiesUsed": "Technologies Used:",
+    "jobs": {
+      "qa-engineer-1": {
+        "title": "QA Engineer",
+        "company": "Tech Company Inc.",
+        "location": "Remote",
+        "startDate": "January 2022",
+        "endDate": "Present",
+        "description": "Leading quality assurance initiatives for web and mobile applications, focusing on test automation and process improvement.",
+        "responsibilities": [
+          "Developed and maintained automated test suites using Selenium and C# for web applications",
+          "Performed comprehensive API testing using Postman and Python",
+          "Collaborated with development teams to implement testing best practices",
+          "Created and executed test plans, test cases, and test scripts",
+          "Identified, documented, and tracked bugs using JIRA",
+          "Conducted regression, functional, and integration testing"
+        ],
+        "achievements": [
+          "Reduced testing time by 40% through automation framework implementation",
+          "Improved bug detection rate by 30% through systematic test coverage analysis",
+          "Mentored 3 junior QA engineers in test automation techniques"
+        ]
+      },
+      "qa-engineer-2": {
+        "title": "Junior QA Engineer",
+        "company": "Software Solutions Ltd.",
+        "location": "Hybrid",
+        "startDate": "June 2020",
+        "endDate": "December 2021",
+        "description": "Responsible for manual and automated testing of enterprise software applications.",
+        "responsibilities": [
+          "Executed manual test cases for web applications",
+          "Developed automated UI tests using Selenium WebDriver",
+          "Performed API testing and validation",
+          "Participated in Agile ceremonies and sprint planning",
+          "Documented test results and reported defects"
+        ],
+        "achievements": [
+          "Successfully automated 50+ test cases in the first 6 months",
+          "Contributed to 95% test coverage for critical features"
+        ]
+      }
+    }
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "educationTitle": "Education",
+    "certificationsTitle": "Certifications",
+    "achievementsTitle": "Achievements:",
+    "courseworkTitle": "Relevant Coursework:",
+    "degreeFormat": "{{degree}} in {{field}}",
+    "gpaFormat": "GPA: {{gpa}}",
+    "items": {
+      "edu-1": {
+        "degree": "Bachelor",
+        "field": "Computer Science (exchange student)",
+        "institution": "OTH Regensburg",
+        "location": "Regensburg, Germany",
+        "startDate": "September 2024",
+        "endDate": "March 2025",
+        "status": "Completed",
+        "description": "Focused on software engineering, quality assurance methodologies, and software testing principles.",
+        "achievements": [
+          "Dean's List for academic excellence (2018-2020)",
+          "Completed senior project on automated testing frameworks",
+          "Member of Computer Science Club"
+        ],
+        "coursework": [
+          "Software Testing and Quality Assurance",
+          "Software Engineering",
+          "Database Systems",
+          "Web Development",
+          "Algorithms and Data Structures"
+        ]
+      },
+      "edu-2": {
+        "degree": "Bachelor",
+        "field": "Computer Science",
+        "institution": "Odessa National Polytechnic University",
+        "location": "Odesa, Ukraine",
+        "startDate": "September 2021",
+        "endDate": "June 2025",
+        "status": "Finished 7 of 8 semesters",
+        "description": "Focused on software engineering, quality assurance methodologies, and software testing principles.",
+        "achievements": [
+          "Dean's List for academic excellence (2018-2020)",
+          "Completed senior project on automated testing frameworks",
+          "Member of Computer Science Club"
+        ],
+        "coursework": [
+          "Software Testing and Quality Assurance",
+          "Software Engineering",
+          "Database Systems",
+          "Web Development",
+          "Algorithms and Data Structures"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "A showcase of quality assurance projects demonstrating expertise in test automation, performance testing, and continuous integration.",
+    "viewDetails": "View Details",
+    "keyHighlights": "Key Highlights:",
+    "more": "+{{count}} more",
+    "status": {
+      "Completed": "Completed",
+      "InProgress": "In Progress",
+      "Planned": "Planned"
+    },
+    "items": {
+      "ecommerce-automation": {
+        "title": "E-commerce Test Automation Suite",
+        "category": "Web Automation",
+        "duration": "6 months",
+        "description": "Comprehensive end-to-end test automation framework for a major e-commerce platform, covering user journeys from product browsing to checkout completion.",
+        "highlights": [
+          "Reduced manual testing time by 70%",
+          "Achieved 95% test coverage",
+          "Integrated with CI/CD pipeline"
+        ]
+      },
+      "api-testing-framework": {
+        "title": "Microservices API Testing Framework",
+        "category": "API Testing",
+        "duration": "4 months",
+        "description": "Robust API testing framework designed for microservices architecture, featuring automated contract testing and performance validation.",
+        "highlights": [
+          "Automated 200+ API endpoints",
+          "Contract testing implementation",
+          "Performance benchmarking"
+        ]
+      },
+      "mobile-ui-automation": {
+        "title": "Mobile App UI Automation",
+        "category": "Mobile Testing",
+        "duration": "5 months",
+        "description": "Cross-platform mobile application testing framework supporting both iOS and Android platforms with comprehensive UI validation.",
+        "highlights": [
+          "Cross-platform compatibility",
+          "Device farm integration",
+          "Parallel test execution"
+        ]
+      },
+      "performance-testing": {
+        "title": "Performance Testing & Optimization",
+        "category": "Performance Testing",
+        "duration": "3 months",
+        "description": "Comprehensive performance testing strategy including load, stress, and endurance testing for high-traffic web applications.",
+        "highlights": [
+          "Identified 40% performance improvement",
+          "Load testing up to 10K users",
+          "Real-time monitoring setup"
+        ]
+      },
+      "cicd-integration": {
+        "title": "CI/CD Pipeline Test Integration",
+        "category": "DevOps & CI/CD",
+        "duration": "4 months",
+        "description": "Seamless integration of automated testing into continuous integration and deployment pipelines, ensuring quality gates at every stage.",
+        "highlights": [
+          "Zero-downtime deployments",
+          "Automated quality gates",
+          "Rollback mechanisms"
+        ]
+      },
+      "security-testing": {
+        "title": "Security Vulnerability Assessment",
+        "category": "Security Testing",
+        "duration": "3 months",
+        "description": "Comprehensive security testing implementation using industry-standard tools to identify and mitigate potential vulnerabilities.",
+        "highlights": [
+          "Identified 15+ vulnerabilities",
+          "OWASP Top 10 compliance",
+          "Automated security scans"
+        ]
+      }
+    }
+  }
+}
